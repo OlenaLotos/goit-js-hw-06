@@ -30,4 +30,4 @@ const elements = images.map(image => {
   return itemRef;
 });
 
-listRef.insertAdjacentHTML('afterbegin', 'itemRef');
+listRef.insertAdjacentHTML('afterbegin', 'itemRef')
