@@ -14,20 +14,34 @@ const images = [
 ];
 
 
+// const listRef = document.querySelector('.gallery');
+// console.log(listRef);
+
+// const elements = images.map(image => {
+//   const itemRef = document.createElement('li');
+//   const imageRef = document.createElement('img');
+//   imageRef.src = image.url;
+//   imageRef.alt = image.alt;
+
+//   itemRef.appendChild(imageRef);
+
+//   console.log(itemRef);
+
+//   return itemRef;
+// });
+
+// listRef.insertAdjacentHTML('afterbegin', 'itemRef')
+
 const listRef = document.querySelector('.gallery');
+
+listRef.insertAdjacentHTML('afterbegin', images
+  .map(image => `<li><img src= ${image.url} alt = "${image.alt}" width = 100% height = 100% /> </li>`)
+  .join(''));
+
+listRef.style.display = 'flex';
+listRef.style.listStyle = "none";
+listRef.style.justifyContent = "space-between";
+listRef.querySelector("li").style.marginRight = "10 px";
+listRef.querySelector("img").style.height = "400 px";
+listRef.querySelector("img").style.objectFit = "cover";
 console.log(listRef);
-
-const elements = images.map(image => {
-  const itemRef = document.createElement('li');
-  const imageRef = document.createElement('img');
-  imageRef.src = image.url;
-  imageRef.alt = image.alt;
-
-  itemRef.appendChild(imageRef);
-
-  console.log(itemRef);
-
-  return itemRef;
-});
-
-listRef.insertAdjacentHTML('afterbegin', 'itemRef')

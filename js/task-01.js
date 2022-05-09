@@ -2,11 +2,18 @@
 const itemRef = document.querySelectorAll('.item');
 console.log("Number of categories:" + itemRef.length);
 
-const catRef = document.querySelectorAll('.li.h2');
+const catRef = document.querySelectorAll('h2');
 
 console.log(catRef);
-// const titleRef = document.querySelectorAll('.item #h2');
-// console.log("Category:", titleRef );
 
-// console.log("itemRef:", itemRef);
+for (const cat of catRef) {
+    console.log("Category:", cat.textContent);
+   
+}
+//  console.log("Elements:", catRef.length);
+
+
+const itemsRef = item[0].querySelectorAll('li');
+
+console.log(itemsRef);
 
