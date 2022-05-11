@@ -8,12 +8,17 @@ console.log(catRef);
 
 for (const cat of catRef) {
     console.log("Category:", cat.textContent);
-   
+    
 }
-//  console.log("Elements:", catRef.length);
+const elementsRef = document.querySelectorAll('li >h2 > ul');
+console.log(elementsRef);
+for (const el of elementsRef) {
+   
+  console.log("Elements:" + el.length);  
+}
 
 
-const itemsRef = item[0].querySelectorAll('li');
+// const itemsRef = item[0].querySelectorAll('li');
 
-console.log(itemsRef);
+// console.log(itemsRef);
 
