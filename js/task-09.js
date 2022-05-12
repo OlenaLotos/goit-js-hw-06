@@ -1,4 +1,4 @@
-// bodyRef = document.querySelector('body');
+const bodyRef = document.querySelector('body');
 const buttonChangeColorRef = document.querySelector('.change-color');
 const currentColorRef = document.querySelector('.color');
 
@@ -9,6 +9,10 @@ function getRandomHexColor() {
     .toString(16)}`;
 };
 
-buttonChangeColorRef.addEventListener('click', (getRandomHexColor) => {
-  currentColorRef.style.backgroundColor = getRandomHexColor;
-  });
+const ChangeColorRef = () => {
+  bodyRef.style.backgroundColor = getRandomHexColor();
+  currentColorRef.textContent = bodyRef.style.backgroundColor;
+}
+
+buttonChangeColorRef.addEventListener('click', ChangeColorRef)
+
