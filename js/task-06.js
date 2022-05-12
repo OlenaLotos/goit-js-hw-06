@@ -1,29 +1,23 @@
-const input = document.querySelector('#validation-input');
-const lengthInput = document.querySelector('[data-length]');
+const inputForm = document.querySelector('#validation-input');
+const lengthInput = document.querySelector('input[data-length]');
  
+inputForm.addEventListener('focus', onInputFocus);
+inputForm.addEventListener('blur', onInputBlur);
 
-// console.log(input);
-// // function onInputBlur() {
-// //     const lengthInput = input.value.length;
-// //     if (input.value.length = input.lengthInput) {
-// //         input.style.valid;
-// //     } else {
-// //        input.style.invalid;
-// //     };
-
-// //     console.log(input.value.length);
-// // }
-
-input.addEventListener('blur', onInputBlur);
-function onInputBlur() {
+function onInputFocus() {
     
-    if (input.value === lengthInput) {
-        input.style.valid;
-    } else {
-        input.style.invalid;
-    };
-    console.log(input.value); 
-     console.log(lengthInput); 
 };
+
+function onInputBlur(event) {
+    
+    if (event.currentTarget.value.length === (Number(lengthInput.dataset.length))){ 
+ inputForm.classList.add('valid');
+}
+     else {
+            inputForm.classList.add('invalid');
+        }
+    }
+    
+
 
 
