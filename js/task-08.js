@@ -12,10 +12,10 @@ function onFormSubmit(event) {
     const mail = formElements.email.value;
     const password = formElements.password.value;
   
-    if (mail.value === "" || password.value === "") {
+    if (mail === "" || password === "") {
     return alert("Введіть всі дані");
   };
-    console.log('e-mail:', mail, "password:", password);
+    console.log('{e-mail:', mail, "password:", password);
      event.currentTarget.reset();
 };
 
