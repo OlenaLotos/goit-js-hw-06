@@ -1,16 +1,16 @@
 // 3 варіант
-// const input = document.querySelector('#name-input');
-// const nameText = document.querySelector('#name-output');
+const input = document.querySelector('#name-input');
+const nameText = document.querySelector('#name-output');
 
-// const onInputChange = (event) => {
-//     console.log(event.currentTarget.value);
-//     if (event.currentTarget.value === '') {
-//         nameText.textContent = 'Anonymous';
-//     } else {
-//         nameText.textContent = event.currentTarget.value;
-//     };
-// };
-// input.addEventListener('input', onInputChange);
+const onInputChange = (event) => {
+    console.log(event.currentTarget.value);
+    if (event.currentTarget.value === '') {
+        nameText.textContent = 'Anonymous';
+    } else {
+        nameText.textContent = event.currentTarget.value;
+    };
+};
+input.addEventListener('input', onInputChange);
 
 
 // 2 варіант тернарник
