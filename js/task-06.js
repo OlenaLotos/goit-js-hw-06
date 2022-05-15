@@ -13,8 +13,9 @@ function onInputBlur(event) {
     if (event.currentTarget.value.length === (Number(lengthInput.dataset.length))){ 
  inputForm.classList.add('valid');
 }
-     else {
-            inputForm.classList.add('invalid');
+    else {
+        inputForm.classList.add('invalid');
+        
         }
     }
     
